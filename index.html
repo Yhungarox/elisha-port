@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio |  Makun Elisha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        
+        /* Project card hover effect */
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Mobile menu transition */
+        .mobile-menu {
+            transition: all 0.3s ease;
+        }
+        
+        /* Form input focus */
+        .form-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-indigo-600"> Makun Elisha</a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#works" class="hover:text-indigo-600 transition">Works</a>
+                <a href="#about" class="hover:text-indigo-600 transition">About</a>
+                <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white w-full absolute left-0 px-4 pb-4 shadow-lg">
+            <div class="flex flex-col space-y-3">
+                <a href="#works" class="py-2 hover:text-indigo-600 transition">Works</a>
+                <a href="#about" class="py-2 hover:text-indigo-600 transition">About</a>
+                <a href="#contact" class="py-2 hover:text-indigo-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-r from-indigo-50 to-purple-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                        Building Timeless <br>
+                        <span class="text-indigo-600">Brands & Compelling</span> <br>
+                        Visuals
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8">Crafting memorable brand identities that tell your unique story.</p>
+                    <a href="#works" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition inline-block">
+                        View Projects
+                    </a>
+                </div>
+                <div class="md:w-1/2 fade-in delay-1">
+                    <div class="bg-white p-2 rounded-xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Design Work" class="w-full h-auto rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="works" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Latest Projects</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore my recent design work that showcases my creativity and attention to detail.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md fade-in delay-1">
+                    <img src="https://static.wixstatic.com/media/a51eeb_65b3d6354b6e4ea9a6cc42a01b74048e~mv2.jpg/v1/fit/w_480,h_361,q_90,enc_avif,quality_auto/a51eeb_65b3d6354b6e4ea9a6cc42a01b74048e~mv2.jpg" 
+                         alt="BettaRest Brand Identity" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">BettaRest Brand Identity</h3>
+                        <p class="text-gray-600 mb-4">A complete brand identity system for a luxury hospitality brand.</p>
+                        <a href="project-bettarest.html" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md fade-in delay-2">
+                    <img src="https://static.wixstatic.com/media/a51eeb_071f6713442b4ddb8e145d2f8aa6775a~mv2.jpg/v1/fit/w_480,h_361,q_90,enc_avif,quality_auto/a51eeb_071f6713442b4ddb8e145d2f8aa6775a~mv2.jpg" 
+                         alt="Diliva Logo" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Diliva - Logo & Visual Identity</h3>
+                        <p class="text-gray-600 mb-4">Modern logo and visual identity for a tech startup.</p>
+                        <a href="project-diliva.html" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md fade-in delay-3">
+                    <img src="https://static.wixstatic.com/media/a51eeb_655d47f34a344f91b54cf95b2a57deea~mv2.png/v1/fit/w_1440,h_1080,q_90,enc_avif,quality_auto/a51eeb_655d47f34a344f91b54cf95b2a57deea~mv2.png" 
+                         alt="Social Media Design" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Social Media Design</h3>
+                        <p class="text-gray-600 mb-4">Eco-friendly cleaning service with a fresh, modern look.</p>
+                        <a href="socialmediadesign.html" class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 fade-in delay-3">
+                <a href="projects.html" class="inline-block px-6 py-3 border-2 border-indigo-600 text-indigo-600 rounded-lg font-medium hover:bg-indigo-600 hover:text-white transition">
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+                    <img src="profile.jpg" 
+                         alt="Elisha Makun" class="w-full max-w-md rounded-xl shadow-lg">
+                </div>
+                <div class="md:w-1/2 md:pl-12 fade-in delay-1">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Hello! I'm Elisha Makun</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        I'm a Brand and Visual Designer with over 4 years of experience crafting timeless brands and compelling designs that bring ideas to life. My passion lies in building strong brand identities and communication strategies that resonate with audiences and drive business growth.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        I specialize in Logo and Brand identity design, and media/marketing design, delivering exceptional results for clients both locally and internationally.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Adobe Photoshop</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Illustrator</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">InDesign</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Figma</span>
+                        <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Premiere Pro</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Me Section -->
+    <section class="py-16 bg-indigo-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Me?</h2>
+                <p class="text-indigo-100 max-w-2xl mx-auto">My design process is centered on collaboration and understanding to deliver exceptional results.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm fade-in delay-1">
+                    <div class="text-4xl mb-4 text-indigo-200">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Creative Solutions</h3>
+                    <p class="text-indigo-100">I blend strategy with creativity to craft solutions that resonate with your audience while exceeding expectations.</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm fade-in delay-2">
+                    <div class="text-4xl mb-4 text-indigo-200">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Adaptive Workflow</h3>
+                    <p class="text-indigo-100">I adapt my workflow to meet the unique demands of each project, ensuring precision and creativity.</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm fade-in delay-3">
+                    <div class="text-4xl mb-4 text-indigo-200">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Client-Centric</h3>
+                    <p class="text-indigo-100">I take time to listen, ask the right questions, and truly grasp your vision to ensure alignment with your goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                    <p class="text-gray-600">Have a project in mind or want to discuss potential collaboration? I'd love to hear from you.</p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/2 fade-in delay-1">
+                        <form class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="first-name" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                                    <input type="text" id="first-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg form-input focus:border-indigo-500">
+                                </div>
+                                <div>
+                                    <label for="last-name" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                                    <input type="text" id="last-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg form-input focus:border-indigo-500">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email*</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg form-input focus:border-indigo-500" required>
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg form-input focus:border-indigo-500">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg form-input focus:border-indigo-500"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="md:w-1/2 fade-in delay-2">
+                        <div class="bg-gray-50 p-8 rounded-xl h-full">
+                            <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-map-marker-alt text-indigo-600 mt-1 mr-4"></i>
+                                    <p>New Layout GRA, Kabba, Kogi State.</p>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <i class="fas fa-envelope text-indigo-600 mr-4"></i>
+                                    <a href="mailto:adebolaoluwatowo@gmail.com" class="hover:text-indigo-600">adebolaoluwatowo@gmail.com</a>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <i class="fas fa-phone text-indigo-600 mr-4"></i>
+                                    <a href="tel:+234-704-915-6715" class="hover:text-indigo-600">+234-704-915-6715</a>
+                                </div>
+                            </div>
+                            
+                            <h3 class="text-xl font-semibold mt-8 mb-4">Connect With Me</h3>
+                            <div class="flex space-x-4">
+                                <a href="https://wa.me/2347049156715" target="_blank" class="w-10 h-10 bg-gray-200 hover:bg-indigo-600 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-whatsapp text-gray-700 hover:text-white"></i>
+                                </a>
+                                <a href="https://x.com/officialmade_" target="_blank" class="w-10 h-10 bg-gray-200 hover:bg-indigo-600 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-twitter text-gray-700 hover:text-white"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-xl font-bold mb-4">Makun Elisha</h3>
+                    <p class="text-gray-400 max-w-xs">Building timeless brands and compelling visuals that tell your unique story.</p>
+                </div>
+                
+                <div class="mb-8 md:mb-0">
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#works" class="text-gray-400 hover:text-white transition">Works</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full">
+                        <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-r-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 by  Makun Elisha. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Built on Wix Studio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-indigo-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Change icon based on menu state
+            if (mobileMenu.classList.contains('hidden')) {
+                menuToggle.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+            } else {
+                menuToggle.innerHTML = '<i class="fas fa-times text-2xl"></i>';
+            }
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuToggle.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add fade-in class to elements when they come into view
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            element.classList.add('opacity-0');
+            fadeInObserver.observe(element);
+        });
+    </script>
+</body>
+</html>

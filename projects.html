@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makun Elisha - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations and effects */
+        .portfolio-item {
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .portfolio-item img {
+            transition: transform 0.5s ease;
+        }
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+        .menu-overlay {
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .hamburger span {
+            transition: all 0.3s ease;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-indigo-600">Makun<span class="text-gray-800">Elisha</span></a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="hover:text-indigo-600 transition">Home</a></li>
+                    <li><a href="#" class="text-indigo-600 font-medium">Works</a></li>
+                    <li><a href="index.html" class="hover:text-indigo-600 transition">About</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="hamburger flex flex-col justify-center items-center">
+                    <span class="block w-6 h-0.5 bg-gray-800 mb-1.5"></span>
+                    <span class="block w-6 h-0.5 bg-gray-800 mb-1.5"></span>
+                    <span class="block w-6 h-0.5 bg-gray-800"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="menu-overlay fixed inset-0 bg-white z-40 flex items-center justify-center">
+        <nav>
+            <ul class="text-center space-y-8">
+                <li><a href="index.html" class="text-2xl hover:text-indigo-600 transition">Home</a></li>
+                <li><a href="#" class="text-2xl text-indigo-600 font-medium">Works</a></li>
+                <li><a href="index.html" class="text-2xl hover:text-indigo-600 transition">About</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 bg-gradient-to-r from-indigo-50 to-purple-50">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">MY ACHIEVEMENTS</h1>
+            <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">Projects That Stand Out</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <a href="project-bettarest.html" class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://static.wixstatic.com/media/a51eeb_65b3d6354b6e4ea9a6cc42a01b74048e~mv2.jpg/v1/fit/w_1440,h_1080,q_90,enc_avif,quality_auto/a51eeb_65b3d6354b6e4ea9a6cc42a01b74048e~mv2.jpg" 
+                             alt="BettaRest Brand identity Design" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">BettaRest Brand Identity Design</h3>
+                        <p class="text-gray-600">Branding, Visual Identity</p>
+                    </div>
+                </a>
+
+                <!-- Portfolio Item 2 -->
+                <a href="project-diliva.html" class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://static.wixstatic.com/media/a51eeb_071f6713442b4ddb8e145d2f8aa6775a~mv2.jpg/v1/fit/w_1440,h_1080,q_90,enc_avif,quality_auto/a51eeb_071f6713442b4ddb8e145d2f8aa6775a~mv2.jpg" 
+                             alt="Diliva - Logo and Visual identity Design" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Diliva - Logo and Visual Identity</h3>
+                        <p class="text-gray-600">Logo Design, Branding</p>
+                    </div>
+                </a>
+
+                <!-- Portfolio Item 3 -->
+                <a href="cleansweep-brand-Identity.html" class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://static.wixstatic.com/media/a51eeb_c054bd0578844088b99e8e130af7a40b~mv2.jpg/v1/fit/w_1440,h_1080,q_90,enc_avif,quality_auto/a51eeb_c054bd0578844088b99e8e130af7a40b~mv2.jpg" 
+                             alt="CleanSweep Brand Identity Design" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">CleanSweep Brand Identity</h3>
+                        <p class="text-gray-600">Brand Strategy, Visual Identity</p>
+                    </div>
+                </a>
+
+                <!-- Portfolio Item 4 -->
+                <a href="cleensweep-socials.html" class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://static.wixstatic.com/media/a51eeb_e3d0341f38814576b516931d86770165~mv2.jpg/v1/fit/w_1440,h_1080,q_90,enc_avif,quality_auto/a51eeb_e3d0341f38814576b516931d86770165~mv2.jpg" 
+                             alt="CleanSweep Social media Design" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">CleanSweep Social Media</h3>
+                        <p class="text-gray-600">Social Media Design</p>
+                    </div>
+                </a>
+
+                <!-- Portfolio Item 5 -->
+                <a href="socialmediadesign.html" class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://static.wixstatic.com/media/a51eeb_655d47f34a344f91b54cf95b2a57deea~mv2.png/v1/fit/w_1440,h_1080,q_90,enc_avif,quality_auto/a51eeb_655d47f34a344f91b54cf95b2a57deea~mv2.png" 
+                             alt="Social Media Design" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Social Media Design</h3>
+                        <p class="text-gray-600">Content Creation, Graphics</p>
+                    </div>
+                </a>
+
+                <!-- Portfolio Item 6 -->
+                <a href="posterandflyerdesign.html" class="portfolio-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://static.wixstatic.com/media/a51eeb_93457d2f2dbc487e9b99e82c10100e71~mv2.jpg/v1/fit/w_1440,h_1080,q_90,enc_avif,quality_auto/a51eeb_93457d2f2dbc487e9b99e82c10100e71~mv2.jpg" 
+                             alt="Poster and Flyer Design Collection" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Poster & Flyer Collection</h3>
+                        <p class="text-gray-600">Print Design, Marketing</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 px-4 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Connect with Me</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Contact Form -->
+                <div class="lg:w-1/2">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email*</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700 transition font-medium">Submit</button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold mb-6">Get in Touch</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-indigo-600 mt-1 mr-4"></i>
+                                <p>New Layout GRA, Kabba, Kogi State.</p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-indigo-600 mr-4"></i>
+                                <a href="mailto:adebolaoluwatowo@gmail.com" class="hover:text-indigo-600 transition">adebolaoluwatowo@gmail.com</a>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone text-indigo-600 mr-4"></i>
+                                <a href="tel:+234-704-915-6715" class="hover:text-indigo-600 transition">+234-704-915-6715</a>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-medium mb-4">Follow Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://wa.me/2347049156715" class="text-gray-700 hover:text-indigo-600 transition">
+                                    <i class="fab fa-whatsapp text-2xl"></i>
+                                </a>
+                                <a href="https://x.com/officialmade_" class="text-gray-700 hover:text-indigo-600 transition">
+                                    <i class="fab fa-twitter text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="index.html" class="text-2xl font-bold text-white">Makun<span class="text-indigo-400">Elisha</span></a>
+                    <p class="mt-2 text-gray-400">© 2025 by Makun Elisha</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        const menuLinks = document.querySelectorAll('#mobile-menu a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

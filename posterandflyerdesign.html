@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster and Flyer Design Collection | Makun Elisha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://static.wixstatic.com/media/a51eeb_93457d2f2dbc487e9b99e82c10100e71~mv2.jpg/v1/fit/w_1440,h_735,q_90,enc_avif,quality_auto/a51eeb_93457d2f2dbc487e9b99e82c10100e71~mv2.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+        }
+
+        .gallery-image {
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.02);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .hero-image {
+                height: 40vh;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Makun Elisha</a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="projects.html">Works</a>
+                <a href="index.html" class="nav-link">About</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="index.html" class="block py-2">Home</a>
+            <a href="projects.html"
+                class="block py-2 font-semibold text-blue-600">Works</a>
+            <a href="index.html" class="block py-2">About</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-image flex items-center justify-center">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Poster and Flyer Design Collection</h1>
+            <p class="text-xl md:text-2xl text-white">Creative designs by Makun Elisha</p>
+        </div>
+    </div>
+
+    <!-- Project Details -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Poster and Flyer Design Collection</h2>
+                <p class="text-gray-600 uppercase tracking-wider">Poster and Flyer Design</p>
+            </div>
+
+            <div class="text-center mb-8">
+                <p class="text-gray-700 max-w-2xl mx-auto">
+                    A collection of vibrant and creative poster and flyer designs showcasing various styles and themes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://static.wixstatic.com/media/a51eeb_93457d2f2dbc487e9b99e82c10100e71~mv2.jpg/v1/fit/w_1440,h_1440,q_90,enc_avif,quality_auto/a51eeb_93457d2f2dbc487e9b99e82c10100e71~mv2.jpg"
+                        alt="Umeh Poster" class="w-full h-auto">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Umeh Poster</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://static.wixstatic.com/media/a51eeb_bcba49da05f24e51a16c5fb5cdb8773e~mv2.jpg/v1/fit/w_1440,h_1440,q_90,enc_avif,quality_auto/a51eeb_bcba49da05f24e51a16c5fb5cdb8773e~mv2.jpg"
+                        alt="Poster Design" class="w-full h-auto">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Creative Poster</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://static.wixstatic.com/media/a51eeb_195449973ff941569f930354e6315ab2~mv2.jpg/v1/fit/w_1440,h_1440,q_90,enc_avif,quality_auto/a51eeb_195449973ff941569f930354e6315ab2~mv2.jpg"
+                        alt="Poster Design" class="w-full h-auto">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Event Poster</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://static.wixstatic.com/media/a51eeb_c06913d4d74243ed9b03a08221834685~mv2.jpg/v1/fit/w_1440,h_1440,q_90,enc_avif,quality_auto/a51eeb_c06913d4d74243ed9b03a08221834685~mv2.jpg"
+                        alt="Oluwuyis" class="w-full h-auto">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Oluwuyis</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://static.wixstatic.com/media/a51eeb_ecb49363aa0a4234a81232853377e172~mv2.jpg/v1/fit/w_1440,h_1440,q_90,enc_avif,quality_auto/a51eeb_ecb49363aa0a4234a81232853377e172~mv2.jpg"
+                        alt="Vj Adams Poster" class="w-full h-auto">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">VJ Adams Poster</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://static.wixstatic.com/media/a51eeb_63103d9eab0c457ab444f0a605fbbe5c~mv2.jpg/v1/fit/w_1440,h_1440,q_90,enc_avif,quality_auto/a51eeb_63103d9eab0c457ab444f0a605fbbe5c~mv2.jpg"
+                        alt="TeckExpert Flyer Design" class="w-full h-auto">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">TeckExpert Flyer</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://static.wixstatic.com/media/a51eeb_f72a604b5ca845c7b0d2da39bf291332~mv2.jpg/v1/fit/w_1440,h_1440,q_90,enc_avif,quality_auto/a51eeb_f72a604b5ca845c7b0d2da39bf291332~mv2.jpg"
+                        alt="Birthday Poster Design" class="w-full h-auto">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Birthday Poster</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://static.wixstatic.com/media/a51eeb_007d6d2f4c7a4549820d1903e4d98d9f~mv2.jpg/v1/fit/w_1440,h_1440,q_90,enc_avif,quality_auto/a51eeb_007d6d2f4c7a4549820d1903e4d98d9f~mv2.jpg"
+                        alt="YTB Poster Design" class="w-full h-auto">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">YTB Poster</h3>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 9 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="IMG_6377.JPG"
+                        alt="AroxNode Poster Design" class="w-full h-auto">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">AroxNode Poster</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Navigation -->
+    <div class="container mx-auto px-4 py-8 flex justify-between">
+        <a href="socialmediadesign.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+            <i class="fas fa-arrow-left mr-2"></i> Previous Project
+        </a>
+    </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <div class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-8">Connect with Me</h2>
+
+            <form class="bg-white p-8 rounded-lg shadow-md">
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-700 font-medium mb-2">Email*</label>
+                    <input type="email" id="email"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <button type="submit"
+                    class="w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 transition duration-300 font-medium">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <p class="mb-2">New Layout GRA, Kabba, Kogi State.</p>
+                    <p class="mb-2"><a href="mailto:adebolaoluwatowo@gmail.com"
+                            class="hover:text-blue-400">adebolaoluwatowo@gmail.com</a></p>
+                    <p><a href="tel:+234-704-915-6715" class="hover:text-blue-400">+234-704-915-6715</a></p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Me</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://wa.me/2347049156715" class="text-2xl hover:text-green-500"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="https://x.com/officialmade_" class="text-2xl hover:text-gray-400"><i
+                                class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>© 2025 by Makun Elisha.</p>
+
+                <div class="flex justify-center space-x-6 mt-4">
+                    <a href="index.html"
+                        class="hover:text-blue-400">Home</a>
+                    <a href="projects.html"
+                        class="hover:text-blue-400">Works</a>
+                    <a href="index.html"
+                        class="hover:text-blue-400">About</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

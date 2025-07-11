@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BettaRest Brand Identity Design | Makun Elisha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://static.wixstatic.com/media/a51eeb_65b3d6354b6e4ea9a6cc42a01b74048e~mv2.jpg/v1/fit/w_1440,h_735,q_90,enc_avif,quality_auto/a51eeb_65b3d6354b6e4ea9a6cc42a01b74048e~mv2.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+        }
+        
+        .project-image {
+            transition: transform 0.3s ease;
+        }
+        
+        .project-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .contact-input {
+            border-bottom: 1px solid #ccc;
+            transition: border-color 0.3s;
+        }
+        
+        .contact-input:focus {
+            border-color: #000;
+            outline: none;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-image {
+                height: 50vh;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold">Makun Elisha</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-900 hover:text-gray-600">Home</a>
+                    <a href="projects.html" class="text-gray-900 hover:text-gray-600">Works</a>
+                    <a href="index.html" class="text-gray-900 hover:text-gray-600">About</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-gray-900">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-white z-20 pt-20 px-4">
+        <div class="flex flex-col space-y-6 text-center">
+            <a href="index.html" class="text-gray-900 text-xl py-2 hover:text-gray-600">Home</a>
+            <a href="projects.html" class="text-gray-900 text-xl py-2 hover:text-gray-600">Works</a>
+            <a href="index.html" class="text-gray-900 text-xl py-2 hover:text-gray-600">About</a>
+            <button id="close-menu" class="absolute top-4 right-4 text-gray-900">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-image flex items-center justify-center pt-16">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">BettaRest Brand Identity</h1>
+            <p class="text-xl md:text-2xl text-white">Logo and Visual Identity Design</p>
+        </div>
+    </div>
+
+    <!-- Project Details -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="md:col-span-2">
+                <h2 class="text-3xl font-bold mb-6 text-black">Project Overview</h2>
+                <p class="text-lg leading-relaxed mb-8 text-black">
+                    The BettaRest brand identity design project focused on creating a logo and visual identity that embody hospitality, relaxation, reliability, and connection. Drawing inspiration from a palm tree for assurance, interconnected elements for networking, and wavy lines for calmness, the design conveys BettaRest's mission to offer a seamless and restful hotel booking experience. The project aimed to establish a professional, approachable, and memorable brand image for the platform.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-black">Project Type</h3>
+                        <p class="text-black">Logo and Visual Identity Design</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-black">Date</h3>
+                        <p class="text-black">February 2025</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-lg">
+                <h3 class="text-xl font-semibold mb-4">Design Elements</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <i class="fas fa-tree text-green-500 mt-1 mr-2"></i>
+                        <span>Palm tree inspiration for assurance</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-project-diagram text-blue-500 mt-1 mr-2"></i>
+                        <span>Interconnected elements for networking</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-water text-blue-300 mt-1 mr-2"></i>
+                        <span>Wavy lines for calmness</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-hotel text-yellow-500 mt-1 mr-2"></i>
+                        <span>Hospitality-focused design</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Images -->
+    <div class="bg-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="project-image">
+                    <img src="https://static.wixstatic.com/media/a51eeb_ccdd50eaca6d4f7a9a9421becd57ffe2~mv2.jpg/v1/fit/w_1440,h_1440,q_90,enc_avif,quality_auto/a51eeb_ccdd50eaca6d4f7a9a9421becd57ffe2~mv2.jpg" alt="BettaRest Logo Design" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="project-image">
+                    <img src="https://static.wixstatic.com/media/a51eeb_1488225044114b5da15b552fafa5d2ab~mv2.png/v1/fit/w_1440,h_1440,q_90,enc_avif,quality_auto/a51eeb_1488225044114b5da15b552fafa5d2ab~mv2.png" alt="BettaRest Brand Elements" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="project-image">
+                    <img src="https://static.wixstatic.com/media/a51eeb_26f7c86e8feb4376b6ddd14a4a8e31a6~mv2.png/v1/fit/w_1440,h_1440,q_90,enc_avif,quality_auto/a51eeb_26f7c86e8feb4376b6ddd14a4a8e31a6~mv2.png" alt="BettaRest Brand Application" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="project-image">
+                    <img src="https://static.wixstatic.com/media/a51eeb_f33a17d9f23d4655a8c0886fad8d1a52~mv2.png/v1/fit/w_1440,h_1440,q_90,enc_avif,quality_auto/a51eeb_f33a17d9f23d4655a8c0886fad8d1a52~mv2.png" alt="BettaRest Brand Variations" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Navigation -->
+    <div class="container mx-auto px-4 py-8 flex justify-between">
+        <a href="#" class="text-grey-900 hover:text-grey-800 font-medium flex items-center">
+            <i class="fas fa-arrow-left mr-2"></i> Previous Project
+        </a>
+        <a href="project-diliva.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+            Next Project <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-8 text-center">Connect with Me</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <form class="space-y-6">
+                        <div>
+                            <input type="email" placeholder="Email*" class="contact-input bg-transparent w-full py-3 text-white placeholder-gray-400">
+                        </div>
+                        <button type="submit" class="bg-white text-gray-900 px-6 py-3 rounded-full font-medium hover:bg-gray-200 transition duration-300">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+                
+                <div>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold mb-2">Contact Info</h3>
+                        <p>New Layout GRA, Kabba, Kogi State.</p>
+                        <p><a href="mailto:adebolaoluwatowo@gmail.com" class="hover:underline">adebolaoluwatowo@gmail.com</a></p>
+                        <p>Tel: <a href="tel:+234-704-915-6715" class="hover:underline">+234-704-915-6715</a></p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Follow Me</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://wa.me/2347049156715" class="text-white hover:text-gray-300">
+                                <i class="fab fa-whatsapp text-2xl"></i>
+                            </a>
+                            <a href="https://x.com/officialmade_" class="text-white hover:text-gray-300">
+                                <i class="fab fa-twitter text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:underline">Home</a></li>
+                        <li><a href="projects.html" class="hover:underline">Works</a></li>
+                        <li><a href="index.html" class="hover:underline">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="mb-4">© 2025 by Makun Elisha.</p>
+                    <p class="text-gray-400">Brand identity design specializing in creating memorable and effective visual identities for businesses.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+        
+        // Close menu when clicking on a link
+        const menuLinks = document.querySelectorAll('#mobile-menu a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+</body>
+</html>
