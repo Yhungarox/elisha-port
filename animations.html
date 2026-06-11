@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Projects | Miracle Arokoyo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+                url('animations/anim-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Video card */
+        .video-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .video-card:hover {
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
+            transform: translateY(-3px);
+        }
+
+        /* Video wrapper — 16:9 */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            background: #111;
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Play overlay */
+        .play-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.35);
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .play-overlay:hover {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .play-overlay.hidden {
+            display: none;
+        }
+
+        .play-btn {
+            width: 64px;
+            height: 64px;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+        }
+
+        .play-overlay:hover .play-btn {
+            transform: scale(1.1);
+        }
+
+        /* Tag pill */
+        .tag {
+            display: inline-block;
+            background: #eff6ff;
+            color: #2563eb;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 999px;
+        }
+
+        /* Divider line between projects */
+        .project-divider {
+            border: none;
+            border-top: 1px solid #e5e7eb;
+            margin: 0;
+        }
+
+        .contact-input {
+            border-bottom: 1px solid #6b7280;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .contact-input:focus {
+            border-bottom-color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .hero-image {
+                height: 40vh;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Miracle Arokoyo</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="projects.html" class="nav-link">Works</a>
+                <a href="animation-projects.html" class="nav-link font-semibold text-blue-600">Animation</a>
+                <a href="index.html" class="nav-link">About</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="index.html" class="block py-2">Home</a>
+            <a href="projects.html" class="block py-2">Works</a>
+            <a href="animation-projects.html" class="block py-2 font-semibold text-blue-600">Animation</a>
+            <a href="index.html" class="block py-2">About</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="hero-image flex items-center justify-center">
+        <div class="text-center px-4">
+            <p class="text-blue-300 uppercase tracking-widest text-sm font-semibold mb-3">Motion & Animation</p>
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Business Ad Animations</h1>
+            <p class="text-lg md:text-xl text-gray-200 max-w-xl mx-auto">Short-form motion graphics and video ads
+                crafted to communicate brand stories with clarity and impact.</p>
+        </div>
+    </div>
+
+    <!-- Projects List -->
+    <div class="container mx-auto px-4 py-16 max-w-4xl">
+
+        <!-- Project 1 -->
+        <div class="video-card mb-4">
+            <div class="video-wrapper">
+                <video id="video-1" preload="metadata" poster="">
+                    <source src="animations/anim-1.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <div class="play-overlay" id="overlay-1" onclick="togglePlay('video-1','overlay-1')">
+                    <div class="play-btn">
+                        <i class="fas fa-play text-blue-600 text-xl ml-1"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="p-6">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="tag">Brand Ad</span>
+                    <span class="text-gray-400 text-sm">2026</span>
+                </div>
+                <h2 class="text-xl font-bold mb-1">Linking Media Ad</h2>
+                <p class="text-gray-500 text-sm leading-relaxed">This is my latest animation work which was for a
+                    marketing agency who wanted to put theirself out as a brand that help small businesses grow by
+                    building a strategy that works. I used Adobe After effects for the animation which came out very
+                    nice for the client.</p>
+            </div>
+        </div>
+
+        <hr class="project-divider mb-8">
+
+        <!-- Project 2 -->
+        <div class="video-card mb-4">
+            <div class="video-wrapper" style="aspect-ratio: 9/16; max-width: 360px; margin: 0 auto;">
+                <video id="video-2" preload="metadata" poster=""
+                    style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <source src="animations/anim-2.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <div class="play-overlay" id="overlay-2" onclick="togglePlay('video-2','overlay-2')">
+                    <div class="play-btn">
+                        <i class="fas fa-play text-blue-600 text-xl ml-1"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="p-6">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="tag">Motion Graphics</span>
+                    <span class="text-gray-400 text-sm">2024</span>
+                </div>
+                <h2 class="text-xl font-bold mb-1">K.K.H.S Media Advert</h2>
+                <p class="text-gray-500 text-sm leading-relaxed">This project was made for an Indian client who are into
+                    different services and I used Adobe after effects. It was my first annimation which was shortly
+                    after a bootcamp I finished from.</p>
+            </div>
+        </div>
+        <hr class="project-divider mb-8">
+
+    </div>
+
+    <!-- Contact Section -->
+    <div class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-8 text-center">Connect with Me</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <form class="space-y-6">
+                        <div>
+                            <input type="email" placeholder="Email*"
+                                class="contact-input bg-transparent w-full py-3 text-white placeholder-gray-400">
+                        </div>
+                        <button type="submit"
+                            class="bg-white text-gray-900 px-6 py-3 rounded-full font-medium hover:bg-gray-200 transition duration-300">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+
+                <div>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold mb-2">Contact Info</h3>
+                        <p><a href="mailto:miraclearokoyo2018@gmail.com"
+                                class="hover:underline">miraclearokoyo2018@gmail.com</a></p>
+                        <p>Tel: <a href="tel:+234-813-735-9537" class="hover:underline">+234-813-735-9537</a></p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Follow Me</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://wa.me/2348137359537" class="text-white hover:text-gray-300">
+                                <i class="fab fa-whatsapp text-2xl"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/miracle-arokoyo/"
+                                class="text-white hover:text-gray-300">
+                                <i class="fab fa-linkedin text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:underline">Home</a></li>
+                        <li><a href="projects.html" class="hover:underline">Works</a></li>
+                        <li><a href="index.html" class="hover:underline">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="mb-4">© 2026 by Miracle Arokoyo.</p>
+                    <p class="text-gray-400">Brand identity design specializing in creating memorable and effective
+                        visual identities for businesses.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Mobile menu
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Play/pause toggle with overlay hide
+        function togglePlay(videoId, overlayId) {
+            const video = document.getElementById(videoId);
+            const overlay = document.getElementById(overlayId);
+
+            if (video.paused) {
+                // Pause all other videos first
+                document.querySelectorAll('video').forEach(v => {
+                    if (v.id !== videoId && !v.paused) {
+                        v.pause();
+                        // Show overlay for paused video
+                        const otherId = v.id.replace('video-', 'overlay-');
+                        const otherOverlay = document.getElementById(otherId);
+                        if (otherOverlay) otherOverlay.classList.remove('hidden');
+                    }
+                });
+                video.play();
+                overlay.classList.add('hidden');
+            } else {
+                video.pause();
+                overlay.classList.remove('hidden');
+            }
+        }
+
+        // Show overlay again when video ends
+        document.querySelectorAll('video').forEach(video => {
+            video.addEventListener('ended', function () {
+                const overlayId = this.id.replace('video-', 'overlay-');
+                const overlay = document.getElementById(overlayId);
+                if (overlay) overlay.classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
